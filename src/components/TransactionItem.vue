@@ -43,7 +43,7 @@
 <script lang="ts" setup>
 import GroceryIcon from '~/assets/svg/grocery.svg?component'
 import TravelIcon from '~/assets/svg/travel.svg?component'
-import NoticeIcon from '~/assets/svg/Notice.svg?component'
+import NoticeIcon from '~/assets/svg/notice.svg?component'
 import CreditCardIcon from '~/assets/svg/credit-card.svg?component'
 import ChevronRightIcon from '~/assets/svg/chevron-right.svg?component'
 import { computed, PropType } from 'vue';
