@@ -1,12 +1,16 @@
 <template>
     <div class="card-function-bar">
-        <card-function-btn v-if="!isAFrozenCard" @click="startFreezingCard">
+        <card-function-btn
+            v-if="!isAFrozenCard"
+            data-cy="freeze-card-button"
+            @click="startFreezingCard"
+        >
             <template #icon>
                 <freeze-card-icon />
             </template>
             Freeze card
         </card-function-btn>
-        <card-function-btn v-else @click="startUnfreezingCard">
+        <card-function-btn v-else data-cy="unfreeze-card-button" @click="startUnfreezingCard">
             <template #icon>
                 <freeze-card-icon />
             </template>
@@ -61,7 +65,8 @@ const startFreezingCard = () => {
         message: 'You\'re about to freeze this card. Are your sure?',
         ok: {
             label: 'OK',
-            color: 'primary'
+            color: 'primary',
+            'data-cy': "confirm-freeze-card-btn"
         },
         cancel: {
             label: 'Cancel',
@@ -78,7 +83,8 @@ const startUnfreezingCard = () => {
         message: 'You\'re about to unfreeze this card. Are your sure?',
         ok: {
             label: 'OK',
-            color: 'primary'
+            color: 'primary',
+            'data-cy': "confirm-unfreeze-card-btn"
         },
         cancel: {
             label: 'Cancel',
